@@ -16,7 +16,23 @@
     <header class="header" id="header">
         <div class="header__inner">
             <a href="#" class="header__logo">
-                <span class="logo-text">DFR</span>
+                <div class="logo">
+                    <span class="logo__icon">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2.5"/>
+                            <path d="M14 28c2-4 4-12 6-14s4 2 6 6c1.5 3 2.5 6 3 8" stroke="url(#logoGrad)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                            <circle cx="20" cy="10" r="3" fill="url(#logoGrad)"/>
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#e91e8c"/>
+                                    <stop offset="50%" stop-color="#7c3aed"/>
+                                    <stop offset="100%" stop-color="#2563eb"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                    <span class="logo__text">Dance Fit<br><strong>Revolution</strong></span>
+                </div>
             </a>
             <nav class="header__nav" id="nav">
                 <a href="#home" data-en="Home" data-ru="Главная">Home</a>
@@ -303,8 +319,55 @@
                 <span class="section__number">08</span>
                 <h2 class="section__title" data-en="Testimonials" data-ru="Отзывы">Testimonials</h2>
             </div>
-            <div class="testimonials__placeholder">
-                <p data-en="Client reviews coming soon." data-ru="Отзывы клиентов скоро будут добавлены.">Client reviews coming soon.</p>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text" data-en="Victoria's Zumba classes are the highlight of my week! She brings so much energy and makes everyone feel welcome, no matter their level." data-ru="Занятия зумбой у Виктории — лучшая часть моей недели! Она приносит столько энергии и каждый чувствует себя комфортно, независимо от уровня.">Victoria's Zumba classes are the highlight of my week! She brings so much energy and makes everyone feel welcome, no matter their level.</p>
+                    <div class="testimonial-card__author">
+                        <span class="testimonial-card__name">Maria S.</span>
+                        <span class="testimonial-card__class" data-en="Zumba & Latin Dance" data-ru="Зумба и латинские танцы">Zumba & Latin Dance</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text" data-en="I started with zero flexibility and after 3 months of stretching and Pilates with Victoria, I feel like a different person. She really knows how to push you just enough." data-ru="Я начала с нулевой гибкости, и через 3 месяца стретчинга и пилатеса с Викторией чувствую себя другим человеком. Она точно знает, как мотивировать.">I started with zero flexibility and after 3 months of stretching and Pilates with Victoria, I feel like a different person. She really knows how to push you just enough.</p>
+                    <div class="testimonial-card__author">
+                        <span class="testimonial-card__name">Anna K.</span>
+                        <span class="testimonial-card__class" data-en="Pilates & Stretching" data-ru="Пилатес и стретчинг">Pilates & Stretching</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text" data-en="Best personal trainer in Brooklyn! Victoria created a program just for me and I've lost 15 pounds in 4 months. Her nutrition advice is practical and easy to follow." data-ru="Лучший персональный тренер в Бруклине! Виктория составила программу специально для меня, и я сбросила 15 фунтов за 4 месяца. Её советы по питанию практичные и простые.">Best personal trainer in Brooklyn! Victoria created a program just for me and I've lost 15 pounds in 4 months. Her nutrition advice is practical and easy to follow.</p>
+                    <div class="testimonial-card__author">
+                        <span class="testimonial-card__name">Elena T.</span>
+                        <span class="testimonial-card__class" data-en="Personal Training & Nutrition" data-ru="Персональные тренировки и питание">Personal Training & Nutrition</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text" data-en="I was nervous to try hip-hop at my age but Victoria made it fun and judgment-free. Now I go three times a week and my daughter joins me!" data-ru="Я волновалась начать хип-хоп в моём возрасте, но Виктория сделала это весело и без осуждения. Теперь хожу три раза в неделю, и дочка присоединилась!">I was nervous to try hip-hop at my age but Victoria made it fun and judgment-free. Now I go three times a week and my daughter joins me!</p>
+                    <div class="testimonial-card__author">
+                        <span class="testimonial-card__name">Natalia R.</span>
+                        <span class="testimonial-card__class" data-en="Hip-Hop & Step" data-ru="Хип-хоп и степ">Hip-Hop & Step</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text" data-en="The outdoor summer classes on the Boardwalk are amazing. Fresh air, great music, and Victoria's energy — it doesn't feel like exercise at all!" data-ru="Летние занятия на свежем воздухе у Boardwalk — это потрясающе. Свежий воздух, классная музыка и энергия Виктории — даже не чувствуешь, что тренируешься!">The outdoor summer classes on the Boardwalk are amazing. Fresh air, great music, and Victoria's energy — it doesn't feel like exercise at all!</p>
+                    <div class="testimonial-card__author">
+                        <span class="testimonial-card__name">Olga M.</span>
+                        <span class="testimonial-card__class" data-en="Outdoor Fitness" data-ru="Занятия на улице">Outdoor Fitness</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text" data-en="Victoria speaks both English and Russian which is so helpful. She explains everything clearly and corrects your form so you don't get injured. Highly recommend!" data-ru="Виктория говорит и на русском, и на английском — это очень удобно. Она всё объясняет чётко и следит за техникой, чтобы вы не травмировались. Очень рекомендую!">Victoria speaks both English and Russian which is so helpful. She explains everything clearly and corrects your form so you don't get injured. Highly recommend!</p>
+                    <div class="testimonial-card__author">
+                        <span class="testimonial-card__name">Svetlana D.</span>
+                        <span class="testimonial-card__class" data-en="Pilates & Ballet Fitness" data-ru="Пилатес и балетный фитнес">Pilates & Ballet Fitness</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

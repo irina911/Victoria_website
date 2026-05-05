@@ -82,6 +82,32 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     gap: 24px;
 }
 .header__logo { flex-shrink: 0; }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo__icon {
+    display: flex;
+    width: 38px;
+    height: 38px;
+}
+.logo__icon svg { width: 100%; height: 100%; }
+.logo__text {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--clr-text);
+    letter-spacing: 0.3px;
+}
+.logo__text strong {
+    font-weight: 900;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .logo-text {
     font-family: var(--font-display);
     font-weight: 900;
@@ -661,13 +687,51 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 /* ═══ TESTIMONIALS ═══ */
-.testimonials__placeholder {
-    text-align: center;
-    padding: 60px;
-    border: 2px dashed var(--clr-border);
-    border-radius: var(--radius-lg);
-    color: var(--clr-text-muted);
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+.testimonial-card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+.testimonial-card__stars {
+    font-size: 1.1rem;
+    color: var(--clr-yellow);
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+.testimonial-card__text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--clr-text);
+    margin-bottom: 20px;
     font-style: italic;
+}
+.testimonial-card__author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 16px;
+    border-top: 1px solid var(--clr-border);
+}
+.testimonial-card__name {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.testimonial-card__class {
+    font-size: 0.8rem;
+    color: var(--clr-purple);
+    font-weight: 500;
 }
 
 /* ═══ FAQ ═══ */
