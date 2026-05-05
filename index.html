@@ -466,26 +466,26 @@
                     <h3 data-en="Ask Victoria a Question" data-ru="Задать вопрос Виктории">Ask Victoria a Question</h3>
                     <form onsubmit="return handleContact(event)">
                         <div class="form-row">
-                            <input type="text" class="input" placeholder="" required>
+                            <input type="text" name="name" class="input" placeholder="" required>
                             <label data-en="Name" data-ru="Имя">Name</label>
                         </div>
                         <div class="form-row">
-                            <input type="tel" class="input" placeholder="">
+                            <input type="tel" name="phone" class="input" placeholder="">
                             <label data-en="Phone" data-ru="Телефон">Phone</label>
                         </div>
                         <div class="form-row">
-                            <input type="email" class="input" placeholder="">
+                            <input type="email" name="email" class="input" placeholder="">
                             <label data-en="Email" data-ru="Email">Email</label>
                         </div>
                         <div class="form-row">
-                            <select class="input input--select">
+                            <select name="language" class="input input--select">
                                 <option value="" disabled selected data-en="Preferred language" data-ru="Предпочитаемый язык">Preferred language</option>
                                 <option value="en">English</option>
                                 <option value="ru">Русский</option>
                             </select>
                         </div>
                         <div class="form-row">
-                            <select class="input input--select">
+                            <select name="interest" class="input input--select">
                                 <option value="" disabled selected data-en="Interested in..." data-ru="Интересует...">Interested in...</option>
                                 <option value="personal" data-en="Personal Training" data-ru="Индивидуальные тренировки">Personal Training</option>
                                 <option value="pilates" data-en="Pilates" data-ru="Пилатес">Pilates</option>
@@ -501,8 +501,15 @@
                             </select>
                         </div>
                         <div class="form-row">
-                            <textarea class="input input--textarea" rows="4"></textarea>
+                            <textarea name="message" class="input input--textarea" rows="4"></textarea>
                             <label data-en="Message" data-ru="Сообщение">Message</label>
+                        </div>
+                        <div class="form-row form-row--submit">
+                            <select name="sendvia" class="input input--select">
+                                <option value="both" data-en="Send via Email + WhatsApp" data-ru="Отправить на Email + WhatsApp">Send via Email + WhatsApp</option>
+                                <option value="email" data-en="Send via Email only" data-ru="Отправить только на Email">Send via Email only</option>
+                                <option value="whatsapp" data-en="Send via WhatsApp only" data-ru="Отправить только в WhatsApp">Send via WhatsApp only</option>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn--accent btn--block" data-en="Send Question" data-ru="Отправить вопрос">Send Question</button>
                     </form>

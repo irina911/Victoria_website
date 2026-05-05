@@ -159,11 +159,37 @@ function handleNewsletter(e) {
 
 function handleContact(e) {
     e.preventDefault();
+    const form = e.target;
     const lang = document.documentElement.getAttribute('data-lang');
+
+    const name = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const language = form.querySelector('[name="language"]').value;
+    const interest = form.querySelector('[name="interest"]');
+    const interestText = interest.options[interest.selectedIndex]?.text || '';
+    const message = form.querySelector('[name="message"]').value.trim();
+    const sendVia = form.querySelector('[name="sendvia"]').value;
+
+    const body = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nPreferred language: ${language}\nInterested in: ${interestText}\n\nMessage:\n${message}`;
+
+    if (sendVia === 'email' || sendVia === 'both') {
+        const subject = encodeURIComponent(`New inquiry from ${name} — Dance Fit Revolution`);
+        const mailBody = encodeURIComponent(body);
+        window.open(`mailto:vimconsulting90@gmail.com?subject=${subject}&body=${mailBody}`, '_blank');
+    }
+
+    if (sendVia === 'whatsapp' || sendVia === 'both') {
+        const waText = encodeURIComponent(`Hi Victoria! New inquiry from the website:\n\n${body}`);
+        setTimeout(() => {
+            window.open(`https://wa.me/13476756236?text=${waText}`, '_blank');
+        }, sendVia === 'both' ? 500 : 0);
+    }
+
     const msg = lang === 'ru'
-        ? 'Спасибо! Виктория свяжется с вами в ближайшее время.'
-        : 'Thank you! Victoria will get back to you soon.';
+        ? 'Спасибо! Ваше сообщение отправляется Виктории.'
+        : 'Thank you! Your message is being sent to Victoria.';
     alert(msg);
-    e.target.reset();
+    form.reset();
     return false;
 }
