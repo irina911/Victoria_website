@@ -37,7 +37,11 @@
 
 /* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+    overflow-x: hidden;
+}
 body {
     font-family: var(--font-body);
     background: var(--clr-bg);
@@ -45,6 +49,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -489,9 +494,11 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    max-width: 100%;
 }
 .locations__map-embed iframe {
     display: block;
+    max-width: 100%;
 }
 
 /* ═══ SCHEDULE ═══ */
@@ -958,6 +965,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
 @media (max-width: 768px) {
     .section { padding: 60px 0; }
+    .container { padding: 0 16px; }
     .about__grid { grid-template-columns: 1fr; gap: 32px; }
     .classes__grid { grid-template-columns: 1fr; }
     .locations__content { grid-template-columns: 1fr; gap: 32px; }
@@ -965,17 +973,22 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .app__content { grid-template-columns: 1fr; gap: 32px; }
     .gallery__grid { grid-template-columns: repeat(2, 1fr); }
     .contact__grid { grid-template-columns: 1fr; gap: 40px; }
-    .newsletter__card { padding: 40px 24px; }
+    .newsletter__card { padding: 40px 20px; }
     .newsletter__form .input { max-width: 100%; }
+    .hero { padding-left: 16px; padding-right: 16px; }
     .hero__cta { flex-direction: column; align-items: center; }
     .hero__cta .btn { width: 100%; max-width: 280px; }
     .schedule__cta { flex-direction: column; align-items: center; }
     .placeholder-img--portrait { min-height: 280px; }
     .header__actions .btn { display: none; }
     .hamburger { display: flex; }
+    .header__inner { padding: 0 12px; }
+    .testimonials__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
     .gallery__grid { grid-template-columns: 1fr; }
     .hero__title { font-size: 2.2rem; }
+    .container { padding: 0 12px; }
+    .hero { padding-left: 12px; padding-right: 12px; }
 }
