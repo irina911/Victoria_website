@@ -967,6 +967,11 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .section { padding: 60px 0; }
     .container { padding: 0 16px; }
     .about__grid { grid-template-columns: 1fr; gap: 32px; }
+    .about__photo {
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
     .classes__grid { grid-template-columns: 1fr; }
     .locations__content { grid-template-columns: 1fr; gap: 32px; }
     .nutrition__content { grid-template-columns: 1fr; gap: 32px; }
