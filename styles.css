@@ -633,8 +633,11 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     width: 100%;
     height: 450px;
     object-fit: cover;
+    object-position: center top;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    border: 4px solid var(--clr-surface);
+    outline: 1px solid var(--clr-border);
 }
 .locations__photo {
     width: 100%;
